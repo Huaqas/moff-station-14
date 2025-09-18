@@ -18,3 +18,12 @@
   category: cargoproduct-category-name-fun
   group: market
 
+- type: cargoProduct
+  id: SecurityDogReinforcements
+  icon:
+    sprite: _Moffstation/Mobs/Pets/securitydog.rsi
+    state: securitydog
+  product: CrateSecurityDog
+  cost: 8000
+  category: cargoproduct-category-name-security
+  group: market

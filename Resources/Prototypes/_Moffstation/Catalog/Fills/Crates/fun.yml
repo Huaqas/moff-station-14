@@ -25,3 +25,13 @@
         tableId: AllMaidDressesTable
         rolls: !type:ConstantNumberSelector
           value: 5
+
+- type: entity
+  id: CrateSecurityDog
+  parent: CrateLivestock
+  name: security dog reinforcements
+  description: A create tha comes with a single security dog, trained in the art of barking and biting.
+  components:
+  - type: StorageFill
+    contents:
+    - id: MobSecurityDog

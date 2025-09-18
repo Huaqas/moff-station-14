@@ -1,0 +1,125 @@
+- type: entity
+  name: "police dog"
+  parent: [SimpleMobBase, StripableInventoryBase]
+  id: MobSecurityDog
+  description: A dog with a job!
+  components:
+  - type: Hunger
+  - type: Thirst
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Moffstation/Mobs/Pets/securitydog.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: securitydog
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: securitydog
+      Critical:
+        Base: securitydog_crit
+      Dead:
+        Base: securitydog_dead
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 50
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Inventory
+    speciesId: SecurityDog
+    templateId: SecurityDog
+#    displacements:
+#      id:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Animals/scurret/displacement.rsi
+#            state: id
+#      neck:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Animals/scurret/displacement.rsi
+#            state: neck
+#      outerClothing:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Animals/scurret/displacement.rsi
+#            state: outerClothing
+#      suitstorage:
+#        sizeMaps:
+#          32:
+#            sprite: Mobs/Animals/scurret/displacement.rsi
+#            state: suitstorage                 
+  - type: Temperature
+    heatDamageThreshold: 360
+    coldDamageThreshold: 285
+    currentTemperature: 310.15
+    specificHeat: 42
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeat
+      amount: 3
+  - type: Vocal
+    sounds:
+      Male: MaleVulpkanin
+  - type: Damageable
+    damageModifierSet: Vulpkanin
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    soundHit:
+      path: /Audio/Weapons/pierce.ogg
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Piercing: 14 # He got a mean bite! Less than Shiva though.
+  - type: ReplacementAccent
+    accent: dog
+  - type: InteractionPopup # Don't be petting working dogs.
+    successChance: 0.7
+    interactSuccessString: petting-success-dog
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Voice/Vulpkanin/dog_bark2.ogg
+  - type: Grammar
+    attributes:
+      proper: true
+      gender: male
+  - type: Speech
+    speechVerb: Vulpkanin
+    speechSounds: Vulpkanin
+    allowedEmotes: ['Bark', 'Snarl', 'Whine', 'Howl', 'Growl']
+  - type: MessyDrinker
+    spillchance: 0.6 # Messy boy.
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5 # Same walk speed.
+    baseSprintSpeed: 5 # Slightly faster than a player.
+  - type: RandomMetadata
+    nameSegments:
+    - NamesSecurityDog
+  - type: Puller
+    needsHands: false
+  - type: GhostRole
+    allowMovement: true
+    allowSpeech: true
+    makeSentient: true
+    name: ghost-role-information-security-dog-name
+    description: ghost-role-information-security-dog-description
+    rules: ghost-role-information-nonantagonist-rules
+    raffle:
+      settings: short
+  - type: GhostTakeoverAvailable
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - CannotSuicide
+    - VimPilot
+    
