@@ -4,3 +4,17 @@
   - Mats!
   - Mats?
   - Mats...
+
+- type: accent
+  id: Pukeko
+  fullReplacements:
+  - Damn!
+  - Damn?
+  - Damn...
+
+- type: accent
+  id: TallPukeko
+  fullReplacements:
+  - Daaaaaaaaammmmmnnnnn!
+  - Daaaaaaaaammmmmnnnnn?
+  - Daaaaaaaaammmmmnnnnn...

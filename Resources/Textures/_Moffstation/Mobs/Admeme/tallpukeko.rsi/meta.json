@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from monkestation SS13 commit 9605eb64c1241c858019ad0c633a04406f52ad64",
+    "size": {
+      "x": 160,
+      "y": 160
+    },
+    "states": [
+      {
+        "name": "tallpukeko",
+        "directions": 4
+      },
+      {
+        "name": "tallpukeko-dead"
+      }
+    ]
+}

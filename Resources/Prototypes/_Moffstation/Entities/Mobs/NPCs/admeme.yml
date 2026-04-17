@@ -164,3 +164,81 @@
     - CannotSuicide
     - VimPilot
   - type: CanEscapeInventory
+
+- type: entity
+  parent: MobCorgiBase
+  id: MobPukeko
+  name: pukeko
+  description: Damn...
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Moffstation/Mobs/Admeme/pukeko.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: pukeko
+  - type: Speech
+    speechVerb: Pukeko
+    speechSounds: PukekoSpeech
+  - type: InteractionPopup
+    interactSuccessString: petting-success-dog
+    interactFailureString: petting-failure-generic
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/sloth_squeak.ogg
+  - type: BodyEmotes
+    soundsId: MothBodyEmotes
+  - type: Vocal
+    sounds:
+      Male: PukekoEmotes
+      Female: PukekoEmotes
+      Unsexed: PukekoEmotes
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: pukeko
+      Critical:
+        Base: pukeko-dead
+      Dead:
+        Base: pukeko-dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatChicken
+      amount: 2
+  - type: ReplacementAccent
+    accent: Pukeko
+  - type: Tag
+    tags:
+    - VimPilot
+
+- type: entity
+  parent: MobPukeko
+  id: MobTallPukeko
+  name: tall pukeko
+  description: Daaaaaaaaaaaaaaaaaaaammmmmmmmmmnnnnnn......
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: _Moffstation/Mobs/Admeme/tallpukeko.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: tallpukeko
+  - type: Vocal
+    sounds:
+      Male: TallPukekoEmotes
+      Female: TallPukekoEmotes
+      Unsexed: TallPukekoEmotes
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: tallpukeko
+      Critical:
+        Base: tallpukeko-dead
+      Dead:
+        Base: tallpukeko-dead
+  - type: Speech
+    speechSounds: TallPukekoSpeech
+    speechVerb: TallPukeko
+  - type: ReplacementAccent
+    accent: TallPukeko
+  

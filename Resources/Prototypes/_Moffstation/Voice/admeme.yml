@@ -16,3 +16,53 @@
       path: /Audio/_Moffstation/Emotes/cruxlingscream.ogg
     Laugh:
       path: /Audio/_Moffstation/Emotes/cruxlinglaugh.ogg
+
+- type: emoteSounds
+  id: PukekoEmotes
+  params:
+    variation: 0.05
+  sounds: 
+    Scream:
+      path: /Audio/_Moffstation/Animals/Pukeko/damn.ogg
+
+- type: emoteSounds
+  id: TallPukekoEmotes
+  params:
+    variation: 0.05
+  sounds: 
+    Scream:
+      path: /Audio/_Moffstation/Animals/Pukeko/far_away_damn.ogg
+
+- type: speechSounds
+  id: PukekoSpeech
+  saySound:
+    path: /Audio/_Moffstation/Animals/Pukeko/damn_chatter.ogg
+  askSound:
+    path: /Audio/_Moffstation/Animals/Pukeko/damn_chatter.ogg
+  exclaimSound: 
+    path: /Audio/_Moffstation/Animals/Pukeko/damn_chatter.ogg
+
+- type: speechSounds
+  id: TallPukekoSpeech
+  saySound:
+    path: /Audio/_Moffstation/Animals/Pukeko/far_away_damn_chatter.ogg
+  askSound:
+    path: /Audio/_Moffstation/Animals/Pukeko/far_away_damn_chatter.ogg
+  exclaimSound: 
+    path: /Audio/_Moffstation/Animals/Pukeko/far_away_damn_chatter.ogg
+
+- type: speechVerb
+  id: Pukeko
+  name: chat-speech-verb-name-pukeko
+  speechVerbStrings:
+  - chat-speech-verb-pukeko-1
+  - chat-speech-verb-pukeko-2
+  - chat-speech-verb-pukeko-3
+
+- type: speechVerb
+  id: TallPukeko
+  name: chat-speech-verb-name-tallpukeko
+  speechVerbStrings:
+  - chat-speech-verb-tallpukeko-1
+  - chat-speech-verb-tallpukeko-2
+  - chat-speech-verb-tallpukeko-3

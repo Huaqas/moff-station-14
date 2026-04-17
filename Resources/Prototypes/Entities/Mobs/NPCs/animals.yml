@@ -3006,7 +3006,7 @@
     - id: FoodMeat
       amount: 2
   - type: ReplacementAccent
-    accent: dog
+    accent: pukeko
   - type: Tag
     tags:
     - VimPilot
