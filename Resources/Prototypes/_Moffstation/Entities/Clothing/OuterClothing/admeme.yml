@@ -1,0 +1,30 @@
+- type: entity
+  parent: ClothingHeadHatHoodCarp
+  id: ClothingHeadHatHoodShark
+  noSpawn: true
+  name: shark hood
+  description: Do do do do do do...
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/Head/Hoods/shark_suit.rsi
+  - type: Clothing
+    sprite: _Moffstation/Clothing/Head/Hoods/shark_suit.rsi
+
+- type: entity
+  parent: ClothingOuterSuitCarp
+  id: ClothingOuterSuitShark
+  name: shark suit
+  description: A special suit that makes you look just like a shark... Momma shark do do do do do do...
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Clothing/OuterClothing/Suits/shark_suit.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Clothing
+    sprite: _Moffstation/Clothing/OuterClothing/Suits/shark_suit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodShark

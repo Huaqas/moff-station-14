@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from MonkestationSS13 commit aab538122129b7d240f1926e859ab79a9ab110e3, Resomi states created by Huaqas (GitHub).",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "equipped-HELMET",
+            "directions": 4
+        },
+        {
+            "name": "equipped-HELMET-resomi",
+            "directions": 4
+        }
+    ]
+}
