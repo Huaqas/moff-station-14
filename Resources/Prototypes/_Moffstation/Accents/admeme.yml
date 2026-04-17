@@ -1,0 +1,6 @@
+- type: accent
+  id: cruxling
+  fullReplacements:
+  - Mats!
+  - Mats?
+  - Mats...

@@ -27,3 +27,18 @@
   license: "CC-BY-4.0"
   copyright: "Recorded by https://github.com/PixelTheKermit"
   source: "https://github.com/space-wizards/space-station-14/pull/13945"
+
+- files: ["cruxlingsound1"]
+  license: "CC-BY-NC-SA-4.0"
+  copyright: "Voice accected and edited by Huaqas (GitHub)."
+  source: "Me! I made this!"
+
+- files: ["cruxlingsound2"]
+  license: "CC-BY-NC-SA-4.0"
+  copyright: "Voice accected and edited by Huaqas (GitHub)."
+  source: "Me! I made this"
+
+- files: ["cruxlingsound3"]
+  license: "CC-BY-NC-SA-4.0"
+  copyright: "Voice accected and edited by Huaqas (GitHub)."
+  source: "Me! I made this"

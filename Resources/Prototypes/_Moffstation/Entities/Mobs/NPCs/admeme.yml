@@ -1,0 +1,166 @@
+- type: entity # Regular version
+  name: Cruxling
+  parent: SimpleMobBase
+  id: MobCruxling
+  description: This is the adorable by-product of multiple attempts at genetically mixing Vox with cockroaches..
+  components:
+  - type: GhostRole
+    makeSentient: true
+    allowSpeech: true
+    allowMovement: true
+    name: Cruxling
+    description: The bazaar aftermath after mixing Vox DNA with that of a Cockroaches. They are prone to self-replicating.
+    rules: Find your mother!
+    mindRoles:
+    - MindRoleGhostRoleFreeAgentHarmless
+    raffle:
+      settings: default
+    reregister: false
+  - type: GhostTakeoverAvailable
+  - type: Speech
+    speechSounds: CruxlingSpeech
+    speechVerb: SmallMob
+  - type: Vocal
+    sounds:
+      Unsexed: CruxlingEmotes
+  - type: ReplacementAccent
+    accent: cruxling
+  - type: Physics
+    bodyType: KinematicController
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      sprite: _Moffstation/Mobs/Admeme/cruxling.rsi
+      state: cruxling
+  - type: Item
+    size: Tiny
+  - type: HTN
+    constantlyReplan: false
+    rootTask:
+      task: MouseCompound
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 100
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: MobState
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 5
+  - type: Bloodstream
+    bloodReagent: AmmoniaBlood
+    bloodMaxVolume: 20
+  - type: Edible
+  - type: FlavorProfile
+    flavors:
+    - horrible
+    - terrible
+    - chewy
+  - type: Hunger
+    baseDecayRate: 0.25
+  - type: Extractable
+    grindableSolutionName: food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        canReact: false
+        reagents:
+        - ReagentId: AmmoniaBlood
+          Quantity: 20
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatChicken
+      amount: 1
+  - type: Damageable
+    damageContainer: Biological
+  - type: NonSpreaderZombie
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-organic
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 0
+  - type: Temperature
+    heatDamageThreshold: 387
+    coldDamageThreshold: 287
+    currentTemperature: 310.15
+    specificHeat: 42
+    coldDamage:
+      types:
+        Cold: 1 #per second, scales with temperature & other constants
+    heatDamage:
+      types:
+        Heat: 10 #per second, scales with temperature & other constants
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      40: Critical
+      80: Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: cruxling
+      Critical:
+        Base: cruxling-dead
+      Dead:
+        Base: cruxling-dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Caustic
+        damage: 400
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: false
+        spawn:
+          Acidifier:
+            min: 1
+            max: 1
+      - !type:GibBehavior { }
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 120
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          FoodMeatSlime:
+            min: 1
+            max: 1
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 1200
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawnInContainer: true
+        spawn:
+          Ash:
+            min: 1
+            max: 1
+      - !type:BurnBodyBehavior { }
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MeatLaserImpact
+  - type: CombatMode
+  - type: Tag
+    tags:
+    - Trash
+    - CannotSuicide
+    - VimPilot
+  - type: CanEscapeInventory

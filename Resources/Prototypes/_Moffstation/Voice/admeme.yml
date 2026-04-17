@@ -1,0 +1,18 @@
+- type: speechSounds
+  id: CruxlingSpeech
+  saySound:
+    path: /Audio/_Moffstation/Voice/Talk/cruxlingsound1.ogg
+  askSound:
+    path: /Audio/_Moffstation/Voice/Talk/cruxlingsound2.ogg
+  exclaimSound: 
+    path: /Audio/_Moffstation/Voice/Talk/cruxlingsound3.ogg
+
+- type: emoteSounds
+  id: CruxlingEmotes
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/_Moffstation/Emotes/cruxlingscream.ogg
+    Laugh:
+      path: /Audio/_Moffstation/Emotes/cruxlinglaugh.ogg
