@@ -1,0 +1,50 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprites created by Huaqas (GitHub) for MoffStation 14. Stick taken from tgstation commit https://github.com/tgstation/tgstation/commit/c6e3401f2e7e1e55c57060cdf956a98ef1fefc24. Trash taken from tgstation at commit https://github.com/tgstation/tgstation/commit/c6e3401f2e7e1e55c57060cdf956a98ef1fefc24 and modified by Huaqas (GitHub).",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "stick"
+        },
+        {
+            "name": "meat"
+        },
+        {
+            "name": "meat1"
+        },
+        {
+            "name": "meat2"
+        },
+        {
+            "name": "meat3"
+        },
+        {
+            "name": "boot"
+        },
+        {
+            "name": "boot1"
+        },
+        {
+            "name": "boot2"
+        },
+        {
+            "name": "boot3"
+        },
+        {
+            "name": "trash"
+        },
+        {
+            "name": "trash1"
+        },
+        {
+            "name": "trash2"
+        },
+        {
+            "name": "trash3"
+        }
+    ]
+}

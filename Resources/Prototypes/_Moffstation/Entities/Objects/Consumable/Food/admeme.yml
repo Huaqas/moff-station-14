@@ -1,0 +1,80 @@
+- type: entity
+  name: Meatsicle
+  parent: FoodFrozenBase
+  id: FoodFrozenMeatsicle
+  description: Tender piece of delicious meat, frozen on a popsicle. Glorious.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Objects/Consumable/Food/admeme.rsi
+    layers:
+    - state: stick
+    - state: meat
+  - type: Edible
+    trash:
+    - FoodFrozenPopsicleTrash
+  - type: Tag
+    tags:
+    - Meat
+    - Creamsicle
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fat
+          Quantity: 7.5
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 7.5
+
+- type: entity
+  name: Bootsicle
+  parent: FoodFrozenBase
+  id: FoodFrozenBootsicle
+  description: You'd have to be a psychopath to eat this. Or a moth.
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Objects/Consumable/Food/admeme.rsi
+    layers:
+    - state: stick
+    - state: boot
+  - type: Edible
+    trash:
+    - FoodFrozenPopsicleTrash
+  - type: Tag
+    tags:
+    - ClothMade
+    - Creamsicle
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 15
+  - type: Item
+    heldPrefix: cotton        
+
+- type: entity
+  name: Trashsicle
+  parent: FoodFrozenBase
+  id: FoodFrozenTrash
+  description: Tender piece of delicious trash, frozen on a popsicle... Who thinks of this kind of stuff?
+  components:
+  - type: Sprite
+    sprite: _Moffstation/Objects/Consumable/Food/admeme.rsi
+    layers:
+    - state: stick
+    - state: trash
+  - type: Edible
+    trash:
+    - FoodFrozenPopsicleTrash
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: ToxinTrash
+          Quantity: 15
+  - type: Tag
+    tags:
+    - Trash
